@@ -3,13 +3,14 @@
 import { useState } from "react";
 import { POKEMON_DB } from "@/lib/pokemon";
 import type { Pokemon, BattleState, BattlePokemon } from "@/lib/types";
+
 export default function Home() {
   const [battleState, setBattleState] = useState<BattleState | null>(null);
   const [log, setLog] = useState<string[]>([]);
 
   const startBattle = () => {
-    const playerPokemonData = POKEMON_DB[0]; // Pikachu
-    const opponentPokemonData = POKEMON_DB[1]; // Charmander
+    const playerPokemonData = POKEMON_DB.pikachu;
+    const opponentPokemonData = POKEMON_DB.charmander;
 
     // Convert PokemonStats to BattlePokemon
     const playerPokemon: BattlePokemon = {
@@ -188,4 +189,4 @@ export default function Home() {
       </div>
     </div>
   );
-}
+}                           
