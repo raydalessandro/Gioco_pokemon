@@ -2,8 +2,7 @@
 
 import { useState } from "react";
 import { POKEMON_DB } from "@/lib/pokemon";
-import type { Pokemon, BattleState } from "@/lib/types";
-
+import type { Pokemon, BattleState, BattlePokemon } from "@/lib/types";
 export default function Home() {
   const [battleState, setBattleState] = useState<BattleState | null>(null);
   const [log, setLog] = useState<string[]>([]);
